@@ -1,0 +1,133 @@
+@media (min-width: 320px) and (max-width: 480px){
+    .container{
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .header{
+        flex-direction: column;
+        &__logo{
+            margin-bottom: 30px;
+        }
+        &__official{
+            margin-bottom: 10px;
+            font-size: 16px;
+            span{
+                font-size: 24px;
+            }
+        }
+        &__contacts{
+            align-items:center
+        }
+    }
+    .promo{
+        &__wrapper{
+            margin-top: 60px;
+            align-items: center;
+        }
+        &__header{
+            font-size: 24px;
+            line-height: 27px;
+            text-align: center;
+        }
+        &__subheader{
+            font-size: 15px;
+            line-height: 16px;
+            text-align: center;
+        }
+        &__icons{
+            width: 100%;
+            margin-top: 40px;
+            align-items: center;
+        }
+        &__icon{
+            margin-bottom: 10px;
+            font-size: 12px;
+            img{
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .advantages{
+        &__icons{
+            flex-direction: column;
+            align-items: center;
+        }
+        &__icon{
+            width: 80%;
+            margin-bottom: 30px;
+            img{
+                margin-bottom: 10px;
+            }
+            span{
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+@media (min-width: 480px) and (max-width: 768px){
+    .container{
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .header{
+        &__official{
+           display: none;
+       }
+    }
+    .promo{
+        &__wrapper{
+            align-items: center;
+        }
+        &__header{
+            font-size: 38px;
+            line-height: 38px;
+        }
+        &__subheader{
+            font-size: 20px;
+            line-height: 20px;
+        }
+        &__icons{
+            margin-top: 40px;
+        }
+    }
+    .advantages{
+        &__icons{
+            flex-direction: column;
+            align-items: center;
+        }
+        &__icon{
+            width: 80%;
+            margin-bottom: 30px;
+            img{
+                margin-bottom: 10px;
+            }
+            span{
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+    .container{
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .promo{
+        &__wrapper{
+            align-items: center;
+        }
+        &__icons{
+            margin-top: 40px;
+        }
+    }
+}
+
+@media (min-width: 1024) and (max-width: 1199px){
+
+}
+
+@media (min-width: 1200px){
+
+}
