@@ -63,6 +63,20 @@
             }
         }
     }
+    .consultation{
+        &__descr{
+            text-align: center;
+        }
+        .title{
+            &_left{
+                text-align: center;
+                font-size: 30px;
+             }
+        }
+    }
+    .feed-form{
+        margin: 0 auto;
+    }
 }
 
 @media (min-width: 480px) and (max-width: 768px){
@@ -107,6 +121,20 @@
             }
         }
     }
+    .consultation{
+        &__descr{
+            text-align: center;
+        }
+        .title{
+            &_left{
+                text-align: center;
+                font-size: 30px;
+             }
+        }
+    }
+    .feed-form{
+        margin: 0 auto;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1024px){
@@ -121,6 +149,19 @@
         &__icons{
             margin-top: 40px;
         }
+    }   
+    .consultation{
+        &__descr{
+            text-align: center;
+        }
+        .title{
+            &_left{
+                text-align: center;
+             }
+        }
+    }
+    .feed-form{
+        margin: 0 auto;
     }
 }
 
