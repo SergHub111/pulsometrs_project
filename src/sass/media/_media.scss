@@ -90,6 +90,18 @@
     section.carousel{
         padding: 40px 0;
     }
+    .catalog{
+        &__tabs{
+            flex-direction: column;
+        }
+    }
+    .catalog__tabs .catalog__tab{
+        margin-bottom: 10px;
+        transform: skewX(0deg);
+        div{
+            transform: skewX(0deg); 
+        }
+    }
 }
 
 @media (min-width: 480px) and (max-width: 768px){
@@ -161,6 +173,18 @@
     section.carousel{
         padding: 40px 0;
     }
+    .catalog{
+        &__tabs{
+            flex-direction: column;
+        }
+    }
+    .catalog__tabs .catalog__tab{
+        margin-bottom: 10px;
+        transform: skewX(0deg);
+        div{
+            transform: skewX(0deg); 
+        }
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1024px){
@@ -205,10 +229,21 @@
     
 }
 
-@media (min-width: 1024) and (max-width: 1199px){
-
+@media (min-width: 1024px){
+ .carousel{
+    .tns-outer{
+        .tns-nav{
+            button{
+                display: none;
+            }
+        }
+    }
+ }
+.catalog .catalog__content{
+    justify-content: center;
+}
+.catalog .catalog__content .catalog-item{
+    margin: 0 8px 20px 8px;
+}
 }
 
-@media (min-width: 1200px){
-
-}
