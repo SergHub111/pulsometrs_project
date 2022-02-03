@@ -27,8 +27,8 @@
                 background: $main-color;
                 border: none;
                 outline: none;
-                height: 4px;
-                width: 45px;
+                height: 2.5px;
+                width: 50px;
                 // border-radius: 50%;
             }
             .tns-nav-active{
@@ -40,7 +40,7 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        left: -66px;
+        left: -40px;
         border: none;
         background: none;
         img{
@@ -52,7 +52,7 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        right: -66px;
+        right: -40px;
         border: none;
         background: none;
         img{
