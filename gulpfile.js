@@ -10,7 +10,10 @@ gulp.task('server', function () {
     browserSync({
         server: {
             baseDir: "src"
-        }
+        },
+        tunnel: true,
+        online: true
+
     });
 
     gulp.watch("src/*.html").on('change', browserSync.reload);

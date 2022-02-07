@@ -1,3 +1,6 @@
+let myScreenOrientation = window.screen.orientation;
+myScreenOrientation.lock("");
+
 let slider = tns({
     container: '.carousel__inner',
     items: 1,
