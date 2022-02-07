@@ -19,6 +19,7 @@ document.querySelector('.next').addEventListener('click', function () {
 
 $(document).ready(function () {
 
+    // catalog 
     $('ul.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function () {
         $(this)
             .addClass('catalog__tab_active').siblings().removeClass('catalog__tab_active')
@@ -37,4 +38,60 @@ $(document).ready(function () {
     toggleSlide('.catalog-item__link');
     toggleSlide('.catalog-item__back');
 
+
+
+    // modal windows
+    $('[data-modal=consultation]').on('click', function () {
+        $('.overlay, #consultation').fadeIn('fast')
+    });
+
+    $('.modal__close').on('click', function () {
+        $('.modal, .overlay').fadeOut('fast')
+    });
+
+    $('.button_mini').each(function (i) {
+        $(this).on('click', function () {
+            $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text())
+            $('.overlay, #order').fadeIn('fast')
+        })
+    })
+
+    // validation forms
+
+    function validateForm(form) {
+        $(form).validate({
+            rules: {
+                name: {
+                    required: true,
+                    minlength: 2
+                },
+                phone: {
+                    required: true,
+                    minlength: 10
+                },
+                email: {
+                    required: true,
+                    email: true
+                }
+            },
+            messages: {
+                name: {
+                    required: "Укажите свое имя!",
+                    minlength: jQuery.validator.format("Введите не менее {0} букв!")
+                },
+                phone: "Введите корректный номер",
+                email: {
+                    required: "Введите корректную почту",
+                    email: "Ваша почта неккоректна"
+                }
+            }
+        });
+    }
+    validateForm('#consultation-form');
+    validateForm('#consultation form');
+    validateForm('#order form');
+
+    // mask for phone in forms
+
+    $('input[name=phone').mask("+38 (099) 999-99-99");
 });
