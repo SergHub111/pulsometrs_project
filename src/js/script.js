@@ -1,5 +1,4 @@
-let myScreenOrientation = window.screen.orientation;
-myScreenOrientation.lock("");
+
 
 let slider = tns({
     container: '.carousel__inner',
@@ -97,4 +96,46 @@ $(document).ready(function () {
     // mask for phone in forms
 
     $('input[name=phone').mask("+38 (099) 999-99-99");
+
+    // scroll & pageup
+
+    //show pageUpArrow on 1600px scroll
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 1600) {
+            $(".pageup").fadeIn('fast')
+        } else {
+            $(".pageup").fadeOut()
+        }
+    });
+
+    // smooth slide:
+    $("a[href^='#']").click(function () {
+        const _href = $(this).attr("href");
+        $("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
+        return false;
+    });
+
+    // new WOW().init();
+
+    wow = new WOW(
+        {
+            boxClass: 'wow',      // default
+            animateClass: 'animated', // default
+            offset: 0,          // default
+            mobile: true,       // default
+            live: true        // default
+        }
+    )
+    wow.init();
+
+    wowMob = new WOW(
+        {
+            boxClass: 'wowMob',      // default
+            animateClass: 'animated', // default
+            offset: 0,          // default
+            mobile: false,       // default
+            live: true        // default
+        }
+    )
+    wowMob.init();
 });

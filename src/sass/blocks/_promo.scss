@@ -50,6 +50,9 @@
             color:#fff;
             text-transform: uppercase;
             text-decoration: underline;
+            &:active{
+                color: $main-color;
+            }
         }
     }
 }
